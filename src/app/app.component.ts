@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'password-checker';
+  currentMsgFromChild1ToChild2: any;
+  fwdMsgToSib2($event: any) {
+    this.currentMsgFromChild1ToChild2 = $event;
+  }
 }

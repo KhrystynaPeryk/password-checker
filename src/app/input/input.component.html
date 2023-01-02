@@ -1,0 +1,12 @@
+<form [formGroup]="form" class="d-flex align-items-center justify-content-center" autocomplete="off">
+    <section class="d-flex flex-column align-items-center justify-content-center form-group">
+        <h4 class="mt-5 mb-3">Check your password's strength</h4>
+        <div class="d-flex">
+            <input type='text' class="form-control text-center" id='password' formControlName="password"
+                placeholder='P A S S W O R D' [value]="value" (blur)="touched()" (input)="onChange($event)"
+                [(ngModel)]="passwordToBePassed"
+            >
+            <button class="btn border mx-2" type='button' (click)="this.clearPassword()">✕</button>
+        </div>
+    </section>
+</form>
